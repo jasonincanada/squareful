@@ -1,0 +1,27 @@
+﻿<div class="square"
+     style="position: absolute;
+            left:   @(HtmlX)px;
+            top:    @(HtmlY)px;
+            width:  @(HtmlWidth)px;
+            height: @(HtmlHeight)px;
+            border: solid 1px;">
+    <div class="vertical-center horizontal-center">@Size</div>
+</div>
+
+@code {
+    [Parameter]
+    public int Size { get; set; }
+
+    [Parameter]
+    public int Row { get; set; }
+
+    [Parameter]
+    public int Col { get; set; }
+
+    private int HtmlWidth  => Size * Scale;
+    private int HtmlHeight => Size * Scale;
+    private int HtmlX      => Col * Scale;
+    private int HtmlY      => Row * Scale;
+
+    private const int Scale = 20;
+}
