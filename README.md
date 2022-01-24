@@ -17,14 +17,11 @@ Below is a sample shrouding of board #18,178.  It is possible to deduce the exac
 The rough roadmap:
 
 - [x] Buy `squareful.io`
-
 - [ ] Ingest static data into some store
   - [ ] Local file
   - [ ] Database (CosmosDB ?)
-
 - [ ] Board explorer
   - [ ] Render board 1 <= n <= 18656
-
 - [ ] Generate shrouds
 - [ ] Daily puzzle
 - [ ] Deployment
