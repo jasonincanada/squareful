@@ -5,6 +5,13 @@ This is a deduction puzzle for the web, based on [Partridge squares](https://pyr
 This idea started out in [another repo](https://github.com/jasonincanada/square-game) in Haskell, but I'm doing this now as a [Blazor WebAssembly](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) app so I can do the whole thing in C#, even the client side (which would normally be in JavaScript).  Also, this is more of a puzzle than a game so I took the opportunity to change the project name, and managed to grab the `squareful.io` domain name, which was still available
 
 
+## Example
+
+Below is a sample shrouding of board #18,178.  It is possible to deduce the exact location of the 1x1 square in one move:
+
+![Board 18178](./concept-art-18178.png)
+
+
 ## Roadmap
 
 The rough roadmap:
