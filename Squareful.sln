@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squareful.Web", "Squareful.Web\Squareful.Web.csproj", "{32DF0F21-EA7C-4F42-94BD-F22327E7264E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Squareful.Web", "Squareful.Web\Squareful.Web.csproj", "{32DF0F21-EA7C-4F42-94BD-F22327E7264E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squareful.Model", "Squareful.Model\Squareful.Model.csproj", "{4BF3F316-2C61-42F7-9D0D-A8473A456552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Squareful.Tests", "Squareful.Tests\Squareful.Tests.csproj", "{DC6A90B1-8DCE-4912-855A-E14A40472597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{32DF0F21-EA7C-4F42-94BD-F22327E7264E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32DF0F21-EA7C-4F42-94BD-F22327E7264E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32DF0F21-EA7C-4F42-94BD-F22327E7264E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BF3F316-2C61-42F7-9D0D-A8473A456552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BF3F316-2C61-42F7-9D0D-A8473A456552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BF3F316-2C61-42F7-9D0D-A8473A456552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BF3F316-2C61-42F7-9D0D-A8473A456552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC6A90B1-8DCE-4912-855A-E14A40472597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC6A90B1-8DCE-4912-855A-E14A40472597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC6A90B1-8DCE-4912-855A-E14A40472597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC6A90B1-8DCE-4912-855A-E14A40472597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
