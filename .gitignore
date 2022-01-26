@@ -7,3 +7,4 @@ Squareful.Model/obj
 Squareful.Tests/bin
 Squareful.Tests/obj
 
+*.user
