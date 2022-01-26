@@ -1,0 +1,32 @@
+﻿@page "/show-board/{ID:int}"
+@inject HttpClient Http
+
+<h3>Board #@ID</h3>
+
+@{
+    if (string.IsNullOrEmpty(Sequence))
+    {
+        <p>No board loaded</p>
+    }
+    else
+    {
+        <Board Sequence=@Sequence />
+    }
+}
+
+@code {
+
+    [Parameter]
+    public int ID { get; set; }
+
+    private string Sequence { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string url = $"boards/{ID}.txt";
+        string sequenceData = await Http.GetStringAsync(url);
+
+        Sequence = sequenceData.Substring(0, 36);
+    }
+
+}

@@ -1,55 +1,26 @@
-﻿<h2>Board #18,178</h2>
-
+﻿
 <div class="board"
      style="position: relative;
             width:  @(HtmlWidth)px;
             height: @(HtmlHeight)px;
             border: solid 1px;">
 
-    @* Manually specify the squares for board #18,178, our demo board *@
-    <Square Size=1 Row=14 Col=29 />
-        
-    <Square Size=2 Row=12 Col=26 />
-    <Square Size=2 Row=12 Col=28 />
+     @{
+        if (BoardData == null)
+        {
+            <p>No board</p>
+        }
+        else
+         {
+            foreach (var square in BoardData.Squares)
+            {
+                <Square Size=square.Size
+                        Row=square.Row
+                        Col=square.Col />
+            }
+         }
+     }
     
-    <Square Size=3 Row=12 Col=30 />
-    <Square Size=3 Row=12 Col=33 /> 
-    <Square Size=3 Row=14 Col=26 />
-
-    <Square Size=4 Row=8  Col=16 />
-    <Square Size=4 Row=8  Col=20 />
-    <Square Size=4 Row=32 Col=0  />
-    <Square Size=4 Row=32 Col=4  />
-
-    <Square Size=5 Row=12 Col=16 />
-    <Square Size=5 Row=12 Col=21 />
-    <Square Size=5 Row=24 Col=8  />
-    <Square Size=5 Row=24 Col=13 />
-    <Square Size=5 Row=24 Col=18 />
-
-    <Square Size=6 Row=0  Col=24 />
-    <Square Size=6 Row=0  Col=30 />
-    <Square Size=6 Row=6  Col=24 />
-    <Square Size=6 Row=6  Col=30 />
-    <Square Size=6 Row=17 Col=23 />
-    <Square Size=6 Row=23 Col=23 />
-
-    <Square Size=7 Row=15 Col=29 />
-    <Square Size=7 Row=17 Col=16 />
-    <Square Size=7 Row=22 Col=29 />
-    <Square Size=7 Row=29 Col=8  />
-    <Square Size=7 Row=29 Col=15 />
-    <Square Size=7 Row=29 Col=22 />
-    <Square Size=7 Row=29 Col=29 />
-
-    <Square Size=8 Row=0  Col=0  />
-    <Square Size=8 Row=0  Col=8  />
-    <Square Size=8 Row=0  Col=16 />
-    <Square Size=8 Row=8  Col=0  />
-    <Square Size=8 Row=8  Col=8  />
-    <Square Size=8 Row=16 Col=0  />
-    <Square Size=8 Row=16 Col=8  />
-    <Square Size=8 Row=24 Col=0  />
 </div>
 
 @code {
@@ -57,4 +28,14 @@
     private const int HtmlHeight = 36 * Ratio;
 
     private const int Ratio = 20;
+
+    [Parameter]
+    public string Sequence { get; set; } = string.Empty;
+
+    private Model.Board? BoardData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        BoardData = new Model.Board(Sequence);
+    }
 }

@@ -11,4 +11,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\boards\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Squareful.Model\Squareful.Model.csproj" />
+  </ItemGroup>
+
 </Project>
