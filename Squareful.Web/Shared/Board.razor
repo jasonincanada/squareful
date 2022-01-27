@@ -38,4 +38,9 @@
     {
         BoardData = new Model.Board(Sequence);
     }
+
+    protected override void OnParametersSet()
+    {
+        OnInitialized();
+    }
 }
