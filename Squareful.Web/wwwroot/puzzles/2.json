@@ -1,0 +1,32 @@
+{
+  "PuzzleID": 2,
+  "BoardID": 18178,
+  "Sequence": "888666688445522333178876768555777744",
+  "Published": "2022-01-27",
+  "Shroud": [
+    { "Row": 0 , "Col": 0 , "Size": 8 },
+    { "Row": 8 , "Col": 0 , "Size": 8 },
+    { "Row": 16, "Col": 0 , "Size": 8 },
+
+    { "Row": 15, "Col": 29, "Size": 7 },
+    { "Row": 22, "Col": 29, "Size": 7 },
+    { "Row": 29, "Col": 29, "Size": 7 },
+    { "Row": 29, "Col": 8 , "Size": 7 },
+
+    { "Row": 0 , "Col": 30, "Size": 6 },
+    { "Row": 6 , "Col": 24, "Size": 6 },
+    { "Row": 6 , "Col": 30, "Size": 6 },
+    { "Row": 17, "Col": 23, "Size": 6 },
+
+    { "Row": 12, "Col": 21, "Size": 5 },
+    { "Row": 24, "Col": 13, "Size": 5 },
+    { "Row": 24, "Col": 18, "Size": 5 },
+
+    { "Row": 12, "Col": 30, "Size": 3 },
+    { "Row": 14, "Col": 26, "Size": 3 },
+
+    { "Row": 12, "Col": 28, "Size": 2 },
+
+    { "Row": 14, "Col": 29, "Size": 1 }
+  ]
+}
