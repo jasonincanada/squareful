@@ -7,6 +7,8 @@ Squareful.Model/obj
 Squareful.Tests/bin
 Squareful.Tests/obj
 
+Squareful.Web/Properties
+
 *.user
 
 Docs/.obsidian/community-plugins.json
