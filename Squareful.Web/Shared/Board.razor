@@ -3,7 +3,9 @@
      style="position: relative;
             width:  @(HtmlWidth)px;
             height: @(HtmlHeight)px;
-            border: solid 1px;">
+            border: solid 1px;
+            background-image: url(images/tweed.png);
+            ">
 
      @{
         if (BoardData == null)
@@ -11,9 +13,13 @@
             <p>No board</p>
         }
         else
-         {
+        {
             foreach (var square in BoardData.Squares)
             {
+                // shroud the square by simply not rendering it
+                if (Shroud.Contains(square))
+                    continue;
+
                 <Square Size=square.Size
                         Row=square.Row
                         Col=square.Col />
@@ -31,6 +37,9 @@
 
     [Parameter]
     public string Sequence { get; set; } = string.Empty;
+
+    [Parameter]
+    public List<Model.Square> Shroud { get; set; } = new();
 
     private Model.Board? BoardData { get; set; }
 

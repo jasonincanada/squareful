@@ -1,0 +1,36 @@
+﻿@page "/puzzle/{PuzzleID:int}"
+@inject HttpClient Http
+
+<h3>Puzzle #@PuzzleID</h3>
+
+@{
+    if (PuzzleData == null)
+    {
+        <p>No board loaded</p>
+    }
+    else
+    {
+        <Board Sequence=@PuzzleData.Sequence
+               Shroud=@PuzzleData.Shroud />
+    }
+}
+
+@code {
+
+    [Parameter]
+    public int PuzzleID { get; set; }    
+
+    private Model.Puzzle? PuzzleData { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        string url = $"puzzles/{PuzzleID}.json";
+        PuzzleData = await Http.GetFromJsonAsync<Model.Puzzle>(url);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await OnInitializedAsync();
+    }
+}
+
