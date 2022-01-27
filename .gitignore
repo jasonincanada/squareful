@@ -8,3 +8,8 @@ Squareful.Tests/bin
 Squareful.Tests/obj
 
 *.user
+
+Docs/.obsidian/community-plugins.json
+Docs/.obsidian/hotkeys.json
+Docs/.obsidian/plugins/
+Docs/.obsidian/workspace
