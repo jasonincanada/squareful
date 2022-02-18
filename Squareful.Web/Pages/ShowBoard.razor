@@ -23,10 +23,13 @@
 
     protected override async Task OnInitializedAsync()
     {
-        string url = $"boards/{ID}.txt";
-        string sequenceData = await Http.GetStringAsync(url);
+        string file = Model.Board.BoardFileFor(ID);
+        int    line = Model.Board.BoardFileLineNumberFor(ID);
 
-        Sequence = sequenceData.Substring(0, 36);
+        string url       = $"boards/{file}";
+        string sequences = await Http.GetStringAsync(url);
+
+        Sequence = sequences.Split('\n')[line].Substring(0, 36);
     }
 
     protected override async Task OnParametersSetAsync()

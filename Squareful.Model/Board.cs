@@ -39,5 +39,24 @@
                     levels[col+i] += size;
             }
         }
+
+        /// <summary>
+        /// Return the name of the server-side file containing the board with a given ID
+        /// </summary>
+        /// <param name="boardID">The 1-indexed board ID from 1 to 18,656</param>
+        public static string BoardFileFor(int boardID)
+        {
+            int chunk = (boardID - 1) / 100;
+            return $"boards-{chunk:D3}.txt";
+        }
+
+        /// <summary>
+        /// Return the 0-based index of the line within the board file
+        /// </summary>
+        /// <param name="boardID">The 1-indexed board ID from 1 to 18,656</param>
+        public static int BoardFileLineNumberFor(int boardID)
+        {
+            return (boardID - 1) % 100;
+        }
     }
 }
