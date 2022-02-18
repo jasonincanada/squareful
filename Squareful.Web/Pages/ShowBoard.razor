@@ -1,5 +1,6 @@
 ﻿@page "/show-board/{ID:int}"
 @inject HttpClient Http
+@inject NavigationManager NavigationManager
 
 <h3>Board #@ID</h3>
 
@@ -11,6 +12,12 @@
     else
     {
         <Board Sequence=@Sequence />
+
+        <hr/>
+        <div>
+            <button class="btn btn-primary" @onclick="GoPrev" disabled="@(ID == 1)">Previous Board</button>
+            <button class="btn btn-primary" @onclick="GoNext" disabled="@(ID == 18656)">Next Board</button>
+        </div>
     }
 }
 
@@ -37,4 +44,7 @@
         await OnInitializedAsync();
     }
 
+    private void GoPrev() => NavigationManager.NavigateTo($"/show-board/{ID - 1}");
+    private void GoNext() => NavigationManager.NavigateTo($"/show-board/{ID + 1}");
+    
 }
