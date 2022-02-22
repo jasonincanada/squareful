@@ -7,7 +7,7 @@ This idea started out in [another repo](https://github.com/jasonincanada/square-
 
 ## Example
 
-Below is a sample shrouding of board #18,178.  It is possible to deduce the exact location of the 1x1 square in one move:
+Below is a sample shrouding of board #18,178.  It is possible to deduce the exact location of the 1x1 square in one move.  See this online here: https://squareful-dev.azurewebsites.net/puzzle/2
 
 ![Board 18178](./concept-art-18178.png)
 
